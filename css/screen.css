@@ -22,10 +22,7 @@ html {
 h1 {
   font-size: 1.728em; /* 31.104px */
   line-height: 1.415em; /* 44px @ 31.104px em */
-}
-h2 {
-  font-size: 1.45em; 
-  line-height: 1.22em;
+  padding-bottom: 2.1225em; /* 22px */
 }
 
 a {
@@ -43,6 +40,21 @@ li {
 
 li:last-child {
   padding-bottom: 0;
+}
+
+header {
+
+  background: url(../img/singing2.jpg) #222;
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover; 
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover; 
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: left;
 }
 
 /*modular styles*/
