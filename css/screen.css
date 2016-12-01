@@ -16,38 +16,46 @@ html {
   line-height: 1.222em; /* 22px */
   color: #2FE;
   background-color: #222;
-  padding: 1.222em 16.5px;
+  padding: 0;
 }
 
 h1 {
   font-size: 1.728em; /* 31.104px */
   line-height: 1.415em; /* 44px @ 31.104px em */
   padding-bottom: 2.1225em; /* 22px */
+  padding: 0.7075em;
 }
 
 a {
   color: #EF2;
+  padding: 1.222em;/* 16.5px; */
 }
 
 p,
 ul {
+  padding: 1.222em;
   padding-bottom: 1.222em; /* 22px */
 }
 
 li {
+  padding: 1.222em;
   padding-bottom: 0.611em; /* 11px, half of the gridline */
 }
 
 li:last-child {
+  padding: 1.222em;/* 16.5px; */
   padding-bottom: 0;
+}
+label {
+  padding: 1.222em;/* 16.5px; */
 }
 
 header {
 
   background: url(../img/singing2.jpg) #222;
-  -webkit-background-size: cover; 
-  -moz-background-size: cover; 
-  -o-background-size: cover; 
+  -webkit-background-size: 100%; 
+  -moz-background-size: 100%; 
+  -o-background-size: 100%; 
   background-size: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover; 
