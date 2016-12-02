@@ -1,0 +1,68 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* stylelint-disable */
+/* Keep reset CSS to one minified line */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/* stylelint-enable */
+
+/* base styles */
+
+/* minor third http://www.modularscale.com/?18&px&1.2&web&text */
+
+html {
+  font-size: 1.125em; /* 18px */
+  line-height: 1.222em; /* 22px */
+  color: #2FE;
+  background-color: #222;
+  padding: 0;
+}
+
+h1 {
+  font-size: 1.728em; /* 31.104px */
+  line-height: 1.415em; /* 44px @ 31.104px em */
+  padding-bottom: 2.1225em; /* 22px */
+  padding: 0.7075em;
+}
+
+a {
+  color: #EF2;
+  padding: 1.222em;/* 16.5px; */
+}
+
+p,
+ul {
+  padding: 1.222em;
+  padding-bottom: 1.222em; /* 22px */
+}
+
+li {
+  padding: 1.222em;
+  padding-bottom: 0.611em; /* 11px, half of the gridline */
+}
+
+li:last-child {
+  padding: 1.222em;/* 16.5px; */
+  padding-bottom: 0;
+}
+label {
+  padding: 1.222em;/* 16.5px; */
+}
+
+header {
+
+  background: url(../img/singing2.jpg) #222;
+  -webkit-background-size: 100%; 
+  -moz-background-size: 100%; 
+  -o-background-size: 100%; 
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover; 
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: left;
+}
+
+/*modular styles*/
