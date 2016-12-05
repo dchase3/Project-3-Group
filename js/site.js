@@ -2,7 +2,7 @@
 //(function($) {
 //  $(document).ready(function() {
  $(document).ready(function() {
-    $('#search-form').on('submit', function(e) {
+ //   $('#search-form').on('submit', function(e) {
        var baseurl ='https://api.genius.com/oauth/authorize?client_id=3513jSnBzZdQJJc-HjcmG-ab6I2O26c6v82uMbpHtCVx-Z9sbcgytAUGcuUPuA9x&redirect_uri=http://www.rjdcp3.com/&scope=me&state=2&response_type=token?callback=?';
       $.get(baseurl,
         function(data){
@@ -18,6 +18,7 @@
       var token = urls2.split('&')[0];
       console.log(token);
       
+      $('#search-form').on('submit', function(e) {
           var searched = $('#searchplease').val();
           e.preventDefault();
           console.log(searched);
