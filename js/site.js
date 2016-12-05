@@ -29,10 +29,8 @@
       });
       e.preventDefault();
         
-<<<<<<< HEAD
+
     });  
-=======
-    });
     
     $('#search-form2').on('submit', function(ev) {
       var allLyrics = [];
@@ -60,7 +58,6 @@
     }); 
 
     });    
->>>>>>> js
  })
 
     // Use JSON.parse to parse JSON data. in success: function(data) { var result = JSON.parse(data); document...value = result.Code; } 
