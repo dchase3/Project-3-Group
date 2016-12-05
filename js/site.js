@@ -2,20 +2,20 @@
 //(function($) {
 //  $(document).ready(function() {
  $(document).ready(function() {
-     newUrl=document.URL
+/*     newUrl=document.URL
      $('#content').append(newURL);
      var url=document.URL;
      var url2=url.substr(url.indexOf('=')+1,url.length);
      console.log(url2);
      var token = url2.split('&')[0];
      console.log(token);     
-          
+ */         
     $('#search-form').on('submit', function(e) {
       
       var searched = $('#searchplease').val();
       e.preventDefault();
       console.log(searched);
-      var searchurl = 'api.genius.com/search?q='+searched+'&access_token='+token;
+      var searchurl = 'api.genius.com/search?q='+searched+'&access_token=I7MsEH2Ji96IhXL7Cw90PRZGj-90coK0WZ0LWJVVYiWi2Juv2aCFLbMSfpLGL5nd';
         
       $.get(searchurl,
       function(data) {
