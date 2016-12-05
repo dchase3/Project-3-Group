@@ -4,30 +4,44 @@
     <title>Project3</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no"/>
-    <link rel="stylesheet" media="screen" href="../css/screen.css"/>
+    <link rel="stylesheet" media="screen" href="css/screen.css"/>
   </head>
   <body>
   
     <header id="header">
-      <h1>Header for our website</h1>
+      <h1>Name That Tune</h1>
     </header>
     
     <main>
+    <ul class="navigation">
+      <li><a href="https://api.genius.com/oauth/authorize?client_id=3513jSnBzZdQJJc-HjcmG-ab6I2O26c6v82uMbpHtCVx-Z9sbcgytAUGcuUPuA9x&redirect_uri=http://www.rjdcp3.com/&scope=me&state=2&response_type=token">Get Authorized!</a></li>
+    </ul>
     <p>
     The goal is to create a search bar for song lyrics and music artists
       <form id="search-form" name="search-form" method="get" action="#null">
         <label for="search">Search artist or song:</label>
-        <input type="text" id="search" name="search" />
+        <input type="text" id="searchplease" name="searchplease" />
         <input type="submit" id="search-form-submit" name="search-form-submit" value="Search" />
       </form>
     </p>
+    
+    <p>
+    Search song title for lyrics
+      <form id="search-form2" name="search-form2" method="get" action="#null">
+        <label for="search">Search artist or song:</label>
+        <input type="text" id="searchlyrics" name="searchlyrics" />
+        <input type="submit" id="search-form2-submit" name="search-form2-submit" value="Search" />
+      </form>
+    </p>
+    <p id="content">
+    </p>
     </main>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.j"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/site.js"></script>
     
     <footer>
-      <p>Site Designed by Raiven & Dennis</p>
+      <p>Site Designed by Raiven and Dennis</p>
     </footer>
   </body>
 </html>
