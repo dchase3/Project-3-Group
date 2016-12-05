@@ -12,7 +12,7 @@
       var searched = $('#searchplease').val();
       e.preventDefault();
       console.log(searched);
-      var searchurl = 'api.genius.com/search?q='+searched+'&access_token=I7MsEH2Ji96IhXL7Cw90PRZGj-90coK0WZ0LWJVVYiWi2Juv2aCFLbMSfpLGL5nd';
+      var searchurl = 'http://api.genius.com/search?q='+searched+'&access_token=I7MsEH2Ji96IhXL7Cw90PRZGj-90coK0WZ0LWJVVYiWi2Juv2aCFLbMSfpLGL5nd';
         
       $.get(searchurl,
       function(data) {
