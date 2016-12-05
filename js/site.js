@@ -17,7 +17,7 @@
       $.get(searchurl,
       function(data) {
         $('#content').append(
-        searched+" "+data.hits
+        searched+" "+data[response][hits][0][result].path
         );
         
       });
