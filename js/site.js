@@ -16,8 +16,14 @@
         
       $.get(searchurl,
       function(data) {
+        
+        var lyricspath=data.response.hits[0].result.path;
+        var title=data.response.hits[0].result.title;
+        var songid=data.response.hits[0].result.id;
+        var lyricsp2=data.response.hits[0].result.url;
+        
         $('#content').append(
-        searched+" "+data[response][hits][0][result].path
+        searched+" "+lyricsp2+ " "+songid
         );
         
       });
