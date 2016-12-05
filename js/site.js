@@ -5,19 +5,26 @@
     $('#search-form').on('submit', function(e) {
        var baseurl ='https://api.genius.com/oauth/authorize?client_id=3513jSnBzZdQJJc-HjcmG-ab6I2O26c6v82uMbpHtCVx-Z9sbcgytAUGcuUPuA9x&redirect_uri=http://www.rjdcp3.com/&scope=me&state=2&response_type=token?callback=?';
       $.get(baseurl,
-      function(data){
-  //    resp.addHeader("Access-Control-Allow-Origin", "*");
-        
-      var newUrl=document.URL
-      $('#content').append(newURL);
+        function(data){
+    //    resp.addHeader("Access-Control-Allow-Origin", "*");
+          
+          var newUrl=document.URL
+          $('#content').append(newURL);
+          
+    //pulling access token from address bar
+      var url1=document.URL;
+      var url2=url1.substr(url1.indexOf('=')+1,url1.length);
+      console.log(url2);
+      var token = urls2.split('&')[0];
+      console.log(token);
       
-      var searched = $('#searchplease').val();
-      e.preventDefault();
-      console.log(searched);
+          var searched = $('#searchplease').val();
+          e.preventDefault();
+          console.log(searched);
       
-      var searchurl = newUrl + '/search?q='+searched;
+      var searchurl = 'api.genius.com/search?q='+searched+'/#access_token='+token+'?callback=?';
       
- /*     $.get(baseurl,
+      $.get(searchurl,
       function(data,jsonp) {
         $('#content').append(
   //        data.result+" "+data.url
@@ -26,7 +33,7 @@
         );
         
       });
- */       
+        
       });
       
       
