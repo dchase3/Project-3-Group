@@ -12,7 +12,7 @@
         var searchurl = baseurl + 'search?q='+searched;
    //     data = {q:searched};
     //    response=request.get(searchurl, data=data, headers=headers);
-/*    $.get(
+/*\    $.get(
       'https://api.github.com/users/' + searched,
       function(data) {
  //       $('#content').append(
@@ -21,5 +21,13 @@
       });
    event.preventDefault();
    */
+    $.get(searchurl,
+      function(data) {
+        $('#content').append(
+          searched
+        );
+      });
+   event.preventDefault();
+   
   })
 })
