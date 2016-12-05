@@ -3,10 +3,10 @@
 //  $(document).ready(function() {
  $(document).ready(function() {
     $('#search-form').on('submit', function(e) {
-       var baseurl ='https://api.genius.com/oauth/authorize?client_id=3513jSnBzZdQJJc-HjcmG-ab6I2O26c6v82uMbpHtCVx-Z9sbcgytAUGcuUPuA9x&redirect_uri=http://www.rjdcp3.com/&scope=me&state=2&response_type=token';
+       var baseurl ='https://api.genius.com/oauth/authorize?client_id=3513jSnBzZdQJJc-HjcmG-ab6I2O26c6v82uMbpHtCVx-Z9sbcgytAUGcuUPuA9x&redirect_uri=http://www.rjdcp3.com/&scope=me&state=2&response_type=token?callback=?';
       $.get(baseurl,
-      function(data,HttpServletResponse resp) {
-      resp.addHeader("Access-Control-Allow-Origin", "*");
+      function(data){
+  //    resp.addHeader("Access-Control-Allow-Origin", "*");
         
       var newUrl=document.URL
       $('#content').append(newURL);
@@ -17,7 +17,7 @@
       
       var searchurl = newUrl + '/search?q='+searched;
       
-      $.get(baseurl,
+ /*     $.get(baseurl,
       function(data,jsonp) {
         $('#content').append(
   //        data.result+" "+data.url
@@ -26,7 +26,7 @@
         );
         
       });
-        
+ */       
       });
       
       
