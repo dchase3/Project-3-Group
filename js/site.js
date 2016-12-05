@@ -1,18 +1,55 @@
-$.noConflict();
-(function($) {
-  $(document).ready(function() {
+ $(document).ready(function() {
+/*     newUrl=document.URL
+     $('#content').append(newURL);
+     var url=document.URL;
+     var url2=url.substr(url.indexOf('=')+1,url.length);
+     console.log(url2);
+     var token = url2.split('&')[0];
+     console.log(token);     
+ */         
     $('#search-form').on('submit', function(e) {
-        alert('Clicked!');
-        e.preventDefault();
-        console.log('got submitted'); 
-        var searched = $('#search-form').val();
-        var baseurl ='https://api.genius.com/access_token/naNsqLeRWgjgmRgtVnw-lriaHr4j4VldmMZYwMr5skyyhvt3uuXYlfeJQDd2i3RL2BPio1vBHa2rCmNGVn8hHw/';
-  //      headers = {'Authorization': 'Bearer naNsqLeRWgjgmRgtVnw-lriaHr4j4VldmMZYwMr5skyyhvt3uuXYlfeJQDd2i3RL2BPio1vBHa2rCmNGVn8hHw'};
-        var searchurl = baseurl + 'search?q='+searched;
-   //     data = {q:searched};
-    //    response=request.get(searchurl, data=data, headers=headers);
-    $.get(searchurl);
-   });
-   }
- );
-})(jQuery);
+      
+      var searched = $('#searchplease').val();
+      e.preventDefault();
+      console.log(searched);
+      var searchurl = 'http://api.genius.com/search?q='+searched+'&access_token=I7MsEH2Ji96IhXL7Cw90PRZGj-90coK0WZ0LWJVVYiWi2Juv2aCFLbMSfpLGL5nd';
+        
+      $.get(searchurl,
+      function(data) {
+        
+        var lyricspath=data.response.hits[0].result.path;
+        var title=data.response.hits[0].result.title;
+        var songid=data.response.hits[0].result.id;
+        var lyricsp2=data.response.hits[0].result.url;
+        
+        $('#content').append(
+        searched+" "+lyricsp2+ " "+songid
+        );
+        
+      });
+      e.preventDefault();
+        
+    });
+    
+    $('#search-form2').on('submit', function(ev) {
+      
+      var searched2 = $('#searchlyrics').val();
+      ev.preventDefault();
+      console.log(searched2);
+      
+      $("http://api.genius.com/search?q="+searched2.replace(' ', '%20')+'&access_token=I7MsEH2Ji96IhXL7Cw90PRZGj-90coK0WZ0LWJVVYiWi2Juv2aCFLbMSfpLGL5nd',
+      function(data) { 
+        $("http://api.genius.com/referents?song_id="+songid+'&per_page=50&access_token=I7MsEH2Ji96IhXL7Cw90PRZGj-90coK0WZ0LWJVVYiWi2Juv2aCFLbMSfpLGL5nd', 
+        function(data){ 
+         var lyrics = data.response.referents; 
+         lyrics.forEach(lyric => { 
+          if (lyric.fragment[0] != "[") allLyrics.push(lyric.fragment); 
+         }); 
+         console.log('Lyrics added'); 
+       }); 
+    }); 
+
+    });    
+ })
+
+    // Use JSON.parse to parse JSON data. in success: function(data) { var result = JSON.parse(data); document...value = result.Code; } 
