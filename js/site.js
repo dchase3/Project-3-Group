@@ -38,7 +38,7 @@
           console.log(songname);
         }
        
-        
+        $('#content1').empty();
         $('#content1').append(
         'Top 10 songs by ' + artistname + ':<br />' + songs[0] + ', '+ songs[1] + ', '+ songs[2] + ', '+ songs[3] + ', '+ songs[4] + ', '+ songs[5] + ', '+ songs[6] + ', '+ songs[7] + ', '+ songs[8] + ', '+ songs[9]
         );
@@ -77,7 +77,8 @@
         artist[i] = artistname;
         console.log(artistname);
       }
-        
+      
+      $('#content2').empty();
       $('#content2').append(
       'Top 5 artist matching ' + searched2 + ':<br />' + artist[0] + ', '+ artist[1] + ', '+ artist[2] + ', '+ artist[3] + ', '+ artist[4]
       );
@@ -109,6 +110,7 @@
          }); 
          console.log('Lyrics added'); 
          console.log(allLyrics);
+         $('#content3').empty();
          $('#content3').prepend(
          allLyrics.join('<br />')
          ).append('<br /> <br />');
