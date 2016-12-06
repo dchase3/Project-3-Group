@@ -18,36 +18,31 @@
       $.get(searchurl,
       function(data) {
         
-        var lyricspath=data.response.hits[0].result.path;
-        var title=data.response.hits[0].result.title;
-        var songid=data.response.hits[0].result.id;
-        var lyricsp2=data.response.hits[0].result.url;
-        var artistname=data.response.hits[0].result.primary_artist.name;
-        var artistnl=data.response.hits[0].result.primary_artist.url;
-        
+        var artistname=data.response.hits[0].result.primary_artist.name;        
         var songs = [10];
-              
-        
-         
-        
-        //$('#content1').append(
+             
         for(var i=0;i<=9;i++ )
         {
           var songname=data.response.hits[i].result.title;
           songs[i] = songname;
-          console.log(songname);
+  //        console.log(songname);
         }
+        
+        var songlist;
+        songs.forEach(function(song)
+        songlist += '<li>' + song + '</li>\n'
+        );  
+  //      console.log(songlist);
        
         $('#content1').empty();
         $('#content1').append(
-        'Top 10 songs by ' + artistname + ':<br />' + songs[0] + ', '+ songs[1] + ', '+ songs[2] + ', '+ songs[3] + ', '+ songs[4] + ', '+ songs[5] + ', '+ songs[6] + ', '+ songs[7] + ', '+ songs[8] + ', '+ songs[9]
+        'Top 10 songs by ' + artistname + ':\n' + songlist
         );
         
         //);
         
       });
       e.preventDefault();
-        
 
     });  
     /*End of first search bar*/
@@ -61,26 +56,25 @@
         
     $.get(searchurl,
     function(data) {
-        
-      var lyricspath=data.response.hits[0].result.path;
-      var title=data.response.hits[0].result.title;
-      var songid=data.response.hits[0].result.id;
-      var lyricsp2=data.response.hits[0].result.url;
-      var artistname=data.response.hits[0].result.primary_artist.name;
-      var artistnl=data.response.hits[0].result.primary_artist.url;
-        
-      var artist = [5];
-        
-      for(var i=0;i<=9;i++ )
+
+    
+      var artists = [5]; 
+      for(var i=0;i<=4;i++ )
       {
         var artistname=data.response.hits[i].result.primary_artist.name;
-        artist[i] = artistname;
+        artists[i] = artistname;
         console.log(artistname);
       }
       
+      var artistlist;
+      artists.forEach(function(artist)
+      artistlist += '<li>' + artist + '</li>\n'
+      ); 
+      console.log(artistlist);
+      
       $('#content2').empty();
       $('#content2').append(
-      'Top 5 artist matching ' + searched2 + ':<br />' + artist[0] + ', '+ artist[1] + ', '+ artist[2] + ', '+ artist[3] + ', '+ artist[4]
+      'Top 5 artist matching ' + searched2 + ':\n' + artistlist
       );
         
     });
