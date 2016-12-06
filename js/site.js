@@ -25,19 +25,25 @@
         var artistname=data.response.hits[0].result.primary_artist.name;
         var artistnl=data.response.hits[0].result.primary_artist.url;
         
+        var songs = [10];
               
         
- /*       $('#content1').append(
-        'songs by '+artistname
-        );
-  */      
-        $('#content1').append(
-        (for(i=0;i<=9;i++ )
+         
+        
+        //$('#content1').append(
+        for(var i=0;i<=9;i++ )
         {
           var songname=data.response.hits[i].result.title;
+          songs[i] = songname;
+          console.log(songname);
         }
+       
         
-        ));
+        $('#content1').append(
+        'Top 10 songs by ' + artistname + ':<br />' + songs[0] + ', '+ songs[1] + ', '+ songs[2] + ', '+ songs[3] + ', '+ songs[4] + ', '+ songs[5] + ', '+ songs[6] + ', '+ songs[7] + ', '+ songs[8] + ', '+ songs[9]
+        );
+        
+        //);
         
       });
       e.preventDefault();
