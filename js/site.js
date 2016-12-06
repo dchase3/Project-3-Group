@@ -69,9 +69,17 @@
       var artistname=data.response.hits[0].result.primary_artist.name;
       var artistnl=data.response.hits[0].result.primary_artist.url;
         
+      var artist = [5];
+        
+      for(var i=0;i<=9;i++ )
+      {
+        var artistname=data.response.hits[i].result.primary_artist.name;
+        artist[i] = artistname;
+        console.log(artistname);
+      }
         
       $('#content2').append(
-      artistname
+      'Top 5 artist matching ' + searched2 + ':<br />' + artist[0] + ', '+ artist[1] + ', '+ artist[2] + ', '+ artist[3] + ', '+ artist[4]
       );
         
     });
