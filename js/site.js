@@ -6,7 +6,8 @@
      console.log(url2);
      var token = url2.split('&')[0];
      console.log(token);     
- */         
+ */      
+    /*Beginning of first search bar*/
     $('#search-form').on('submit', function(e) {
       
       var searched = $('#searchplease').val();
@@ -31,7 +32,9 @@
         
 
     });  
+    /*End of first search bar*/
     
+    /*Beginning of second search bar*/
     $('#search-form2').on('submit', function(ev) {
       var allLyrics = [];
       var searched2 = $('#searchlyrics').val();
@@ -52,12 +55,13 @@
          console.log('Lyrics added'); 
          console.log(allLyrics);
          $('#content').append(
-         allLyrics
+         allLyrics.join(',<br />')
          );
        }); 
-    }); 
+      }); 
 
-    });    
+    });
+/*End of second search bar*/    
  })
 
     // Use JSON.parse to parse JSON data. in success: function(data) { var result = JSON.parse(data); document...value = result.Code; } 
