@@ -50,8 +50,16 @@ label {
   padding: 1.222em;/* 16.5px; */
 }
 
-header {
+input {
+  color: 2FE;
+}
 
+script {
+  color: #DDD;
+}
+
+header {
+  color: #DDD;
   background: url(../img/singing2.jpg) #222;
   -webkit-background-size: 100%; 
   -moz-background-size: 100%; 
