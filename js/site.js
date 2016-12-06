@@ -22,10 +22,22 @@
         var title=data.response.hits[0].result.title;
         var songid=data.response.hits[0].result.id;
         var lyricsp2=data.response.hits[0].result.url;
+        var artistname=data.response.hits[0].result.primary_artist.name;
+        var artistnl=data.response.hits[0].result.primary_artist.url;
         
-        $('#content').append(
-        searched+" "+lyricsp2+ " "+songid
+              
+        
+ /*       $('#content1').append(
+        'songs by '+artistname
         );
+  */      
+        $('#content1').append(
+        (for(i=0;i<=9;i++ )
+        {
+          var songname=data.response.hits[i].result.title;
+        }
+        
+        ));
         
       });
       e.preventDefault();
@@ -54,7 +66,7 @@
          }); 
          console.log('Lyrics added'); 
          console.log(allLyrics);
-         $('#content').prepend(
+         $('#content2').prepend(
          allLyrics.join('<br />')
          ).append('<br /> <br />');
        }); 
