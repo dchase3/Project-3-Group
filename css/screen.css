@@ -32,6 +32,7 @@ a {
   padding: 1.222em;/* 16.5px; */
 }
 
+article,
 p,
 ul {
   padding: 1.222em;
@@ -53,10 +54,6 @@ label {
 
 input {
   color: 2FE;
-}
-
-script {
-  color: #DDD;
 }
 
 header {
