@@ -23,7 +23,7 @@
         var songid=data.response.hits[0].result.id;
         var lyricsp2=data.response.hits[0].result.url;
         
-        $('#content').append(
+        $('#content1').append(
         searched+" "+lyricsp2+ " "+songid
         );
         
@@ -54,7 +54,11 @@
          }); 
          console.log('Lyrics added'); 
          console.log(allLyrics);
+<<<<<<< HEAD
          $('#content').prepend(
+=======
+         $('#content2').prepend(
+>>>>>>> js
          allLyrics.join('<br />')
          ).append('<br /> <br />');
        }); 
