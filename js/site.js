@@ -6,7 +6,8 @@
      console.log(url2);
      var token = url2.split('&')[0];
      console.log(token);     
- */         
+ */      
+    /*Beginning of first search bar*/
     $('#search-form').on('submit', function(e) {
       
       var searched = $('#searchplease').val();
@@ -22,7 +23,7 @@
         var songid=data.response.hits[0].result.id;
         var lyricsp2=data.response.hits[0].result.url;
         
-        $('#content').append(
+        $('#content1').append(
         searched+" "+lyricsp2+ " "+songid
         );
         
@@ -31,7 +32,9 @@
         
 
     });  
+    /*End of first search bar*/
     
+    /*Beginning of second search bar*/
     $('#search-form2').on('submit', function(ev) {
       var allLyrics = [];
       var searched2 = $('#searchlyrics').val();
@@ -51,13 +54,14 @@
          }); 
          console.log('Lyrics added'); 
          console.log(allLyrics);
-         $('#content').append(
-         allLyrics
-         );
+         $('#content2').prepend(
+         allLyrics.join('<br />')
+         ).append('<br /> <br />');
        }); 
-    }); 
+      }); 
 
-    });    
+    });
+/*End of second search bar*/    
  })
 
     // Use JSON.parse to parse JSON data. in success: function(data) { var result = JSON.parse(data); document...value = result.Code; } 
