@@ -54,11 +54,7 @@
          }); 
          console.log('Lyrics added'); 
          console.log(allLyrics);
-<<<<<<< HEAD
-         $('#content').prepend(
-=======
          $('#content2').prepend(
->>>>>>> js
          allLyrics.join('<br />')
          ).append('<br /> <br />');
        }); 
