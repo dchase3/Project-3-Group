@@ -55,8 +55,8 @@
          console.log('Lyrics added'); 
          console.log(allLyrics);
          $('#content').append(
-         allLyrics.join(',<br />')
-         );
+         allLyrics.join('<br />')
+         ).append('<br /> <br />');
        }); 
       }); 
 
