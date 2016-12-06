@@ -51,17 +51,46 @@
 
     });  
     /*End of first search bar*/
+    //Beginning of second search bar
+    $('#search-form2').on('submit', function(eve) {
+      
+    var searched2 = $('#searchartist').val();
+    eve.preventDefault();
+    console.log(searched2);
+    var searchurl = 'http://api.genius.com/search?q='+searched2+'&access_token=I7MsEH2Ji96IhXL7Cw90PRZGj-90coK0WZ0LWJVVYiWi2Juv2aCFLbMSfpLGL5nd';
+        
+    $.get(searchurl,
+    function(data) {
+        
+      var lyricspath=data.response.hits[0].result.path;
+      var title=data.response.hits[0].result.title;
+      var songid=data.response.hits[0].result.id;
+      var lyricsp2=data.response.hits[0].result.url;
+      var artistname=data.response.hits[0].result.primary_artist.name;
+      var artistnl=data.response.hits[0].result.primary_artist.url;
+        
+        
+      $('#content2').append(
+      artistname
+      );
+        
+    });
+    eve.preventDefault();
+        
+
+    });  
     
-    /*Beginning of second search bar*/
-    $('#search-form2').on('submit', function(ev) {
+    //End of second search bar
+    /*Beginning of third search bar*/
+    $('#search-form3').on('submit', function(ev) {
       var allLyrics = [];
-      var searched2 = $('#searchlyrics').val();
+      var searched3 = $('#searchlyrics').val();
       ev.preventDefault();
-      console.log(searched2);
-      var search3=searched2.replace(' ', '%20');
+      console.log(searched3);
+      var search3=searched3.replace(' ', '%20');
       console.log(search3);
       
-      $.get('http://api.genius.com/search?q='+searched2.replace(' ', '%20')+'&access_token=I7MsEH2Ji96IhXL7Cw90PRZGj-90coK0WZ0LWJVVYiWi2Juv2aCFLbMSfpLGL5nd',
+      $.get('http://api.genius.com/search?q='+searched3.replace(' ', '%20')+'&access_token=I7MsEH2Ji96IhXL7Cw90PRZGj-90coK0WZ0LWJVVYiWi2Juv2aCFLbMSfpLGL5nd',
       function(data) { 
         var songid2=data.response.hits[0].result.id;
         $.get('http://api.genius.com/referents?song_id='+songid2+'&per_page=50&access_token=I7MsEH2Ji96IhXL7Cw90PRZGj-90coK0WZ0LWJVVYiWi2Juv2aCFLbMSfpLGL5nd', 
@@ -72,14 +101,14 @@
          }); 
          console.log('Lyrics added'); 
          console.log(allLyrics);
-         $('#content2').prepend(
+         $('#content3').prepend(
          allLyrics.join('<br />')
          ).append('<br /> <br />');
        }); 
       }); 
 
     });
-/*End of second search bar*/    
+/*End of third search bar*/    
  })
 
     // Use JSON.parse to parse JSON data. in success: function(data) { var result = JSON.parse(data); document...value = result.Code; } 
