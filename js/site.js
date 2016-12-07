@@ -28,7 +28,7 @@
   //        console.log(songname);
         }
         
-        var songlist;
+        var songlist =' ';
         songs.forEach(function(song)
         songlist += '<li>' + song + '</li>\n'
         );  
@@ -66,7 +66,7 @@
         console.log(artistname);
       }
       
-      var artistlist;
+      var artistlist = ' ';
       artists.forEach(function(artist)
       artistlist += '<li>' + artist + '</li>\n'
       ); 
