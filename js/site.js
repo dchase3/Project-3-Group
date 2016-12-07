@@ -25,22 +25,17 @@
         {
           var songname=data.response.hits[i].result.title;
           songs[i] = songname;
-  //        console.log(songname);
         }
         
         var songlist =' ';
         songs.forEach(function(song) {
         songlist += '<li>' + song + '</li>\n';
-        }
-        );  
-  //      console.log(songlist);
+        });  
        
         $('#ten-songs').empty();
         $('#ten-songs').append(
         'Top 10 songs by ' + searched + ':\n' + songlist
         );
-        
-        //);
         
       });
       e.preventDefault();
@@ -72,7 +67,6 @@
       artistlist += '<li>' + artist + '</li>\n';
       }
       ); 
-      console.log(artistlist);
       
       $('#5-artists').empty();
       $('#5-artists').append(
@@ -91,9 +85,7 @@
       var allLyrics = [];
       var searched3 = $('#searchlyrics').val();
       ev.preventDefault();
-      console.log(searched3);
       var search3=searched3.replace(' ', '%20');
-      console.log(search3);
       
       $.get('http://api.genius.com/search?q='+searched3.replace(' ', '%20')+'&access_token=I7MsEH2Ji96IhXL7Cw90PRZGj-90coK0WZ0LWJVVYiWi2Juv2aCFLbMSfpLGL5nd',
       function(data) { 
@@ -110,9 +102,6 @@
            lyricslist +=  '<li>' + lyric + '</li>\n';
          });
          
-         console.log(lyricslist);
-         
-         console.log('Lyrics added'); 
          console.log(allLyrics);
          $('#lyrics').empty();
          $('#lyrics').prepend(
@@ -124,5 +113,4 @@
     });
 /*End of third search bar*/    
  })
-
-    // Use JSON.parse to parse JSON data. in success: function(data) { var result = JSON.parse(data); document...value = result.Code; } 
+ 
