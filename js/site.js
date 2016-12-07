@@ -37,7 +37,7 @@
        
         $('#ten-songs').empty();
         $('#ten-songs').append(
-        'Top 10 songs by ' + artistname + ':\n' + songlist
+        'Top 10 songs by ' + searched + ':\n' + songlist
         );
         
         //);
