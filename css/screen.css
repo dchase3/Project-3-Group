@@ -44,9 +44,9 @@ ol{
 }
 
 li {
+  list-style-position: inside;
   padding: 1.222em;
   padding-bottom: 0.611em; /* 11px, half of the gridline */
-  list-style-position: inside;
 }
 
 
