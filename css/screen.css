@@ -39,7 +39,6 @@ ul {
   padding-bottom: 1.222em; /* 22px */
 }
 
-
 ol{
   list-style-type: decimal;
 }
@@ -49,6 +48,7 @@ li {
   padding-bottom: 0.611em; /* 11px, half of the gridline */
   list-style-position: inside;
 }
+
 
 li:last-child {
   padding: 1.222em;/* 16.5px; */
