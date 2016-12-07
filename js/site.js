@@ -104,12 +104,20 @@
          lyrics.forEach(lyric => { 
           if (lyric.fragment[0] != "[") allLyrics.push(lyric.fragment); 
          }); 
+         
+         var lyricslist = ' ';
+         allLyrics.forEach(function(lyric) {
+           lyricslist +=  '<li>' + lyric + '</li>\n';
+         });
+         
+         console.log(lyricslist);
+         
          console.log('Lyrics added'); 
          console.log(allLyrics);
          $('#lyrics').empty();
          $('#lyrics').prepend(
-         allLyrics.join('<br />')
-         ).append('<br /> <br />');
+         lyricslist
+         )
        }); 
       }); 
 
