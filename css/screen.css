@@ -50,6 +50,11 @@ li {
   padding-bottom: 0.611em; /* 11px, half of the gridline */
 }
 
+#lyrics li{
+  list-style-type: none;
+    padding: 0.306em;
+}
+
 
 li:last-child {
   padding: 1.222em;/* 16.5px; */
