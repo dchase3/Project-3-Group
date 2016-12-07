@@ -47,7 +47,6 @@ ol{
 li {
   padding: 1.222em;
   padding-bottom: 0.611em; /* 11px, half of the gridline */
-  display: list-item;
   list-style-position: inside;
 }
 
