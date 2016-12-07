@@ -40,6 +40,7 @@ ul {
 }
 
 ol{
+  padding: 1.222em;
   list-style-type: decimal;
 }
 
